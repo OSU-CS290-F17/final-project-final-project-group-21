@@ -1,0 +1,18 @@
+/* ------------------------- header style ------------------------ */
+
+#site-title-box {
+
+}
+
+#spoon {
+    display: inline-box;
+    height: 50px;
+}
+
+#site-title {
+    display: inline-box;
+    color: red;
+
+}
+
+/* =============================================================== */
