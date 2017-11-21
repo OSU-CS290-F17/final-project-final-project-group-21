@@ -5,12 +5,15 @@
     <title>Cooking with Keaton</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
 
     <header>
-      <h1 class="site-title">Cooking with Keaton</h1>
+      <div id="site-title-box">
+        <i id="spoon" class="fa fa-spoon"></i>
+        <h1 id="site-title">Cooking with Keaton</h1>
+      </div>
       <nav class="navbar">
         <ul class="navlist">
           <li class="navitem"><a href="index.html">Home</a></li>
@@ -22,19 +25,28 @@
 
     <main class="home-page">
       <div class="title-container">
-        <h2>This is the premier site for photos of people.</h2>
-        <div class="icon">
-          <i class="fa fa-camera-retro"></i>
-        </div>
-        <div class="icon">
-          <i class="fa fa-group"></i>
-        </div>
+        <h2>The best place to find and submit wonderfully mediocre recipies</h2>
       </div>
+
+      <div id="site-description">
+        <h3>About Cooking w/ Keaton:</h3>
+        <p>
+          Finding recipies is hard. Sorting through them is even harder. We made a website to 
+          fix that problem. Using cutting-edge technology and some luck, this website filters 
+          out recipies based on many important factors such as: cook-time, number of 
+          ingredients, etc. On top of all that slick functionality, you can also submit your 
+          own recipies and get your foot in the door for your future Food Channel™ special! 
+          Our team would definitely use this website if it were real and I think that is what really counts.
+        </p>
+      </div>
+
+      <h3 id="selected-recipes-header">Selected Recipes:</h3>
+      <div class="recipe-holder">
+        <!-- Selected recipes (3 random ones) -->
+      </div>
+
+
     </main>
-
-    <footer>
-
-    </footer>
 
   </body>
 </html>
