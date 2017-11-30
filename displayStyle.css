@@ -1,0 +1,74 @@
+.recipe-image-container img {
+	max-height: 300px;
+	max-width: 350px;
+	position: relative;
+}
+
+.recipe-title h4 {
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+.recipe-info-container {
+	width: 250px;
+	position: relative;
+}
+
+/* Each recipe post */
+.recipe {
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px;
+	border-radius: 10px;
+	border: solid grey;
+}
+
+
+/* Please don't edit.... if so keep in mind recipe-post layout may change */
+.recipe-contents {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Display Recipies */
+.title-container {
+	color: #A239CA;			//CHANGE
+}
+
+h2 {
+	text-align: center;
+	font-family: monospace;
+	font-size: 3.5em;
+	margin: 0px;
+	margin: 10px;
+	padding: 5px;
+}
+
+h4 {
+	font-family: monospace;	
+	color: red;
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.site-title {
+	background-color: #BFD8D2;	/*CHANGE*/
+	color: #DF744A ;		/*CHANGE*/
+	font-size: 70px;
+	font-weight:100;
+	margin: 0px;
+	font-family: monospace;
+	font-weight: 600;
+}
+.navbar {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.navitem {
+	position: relative;
+	list-style-type:none; /*removed 
+}
+
