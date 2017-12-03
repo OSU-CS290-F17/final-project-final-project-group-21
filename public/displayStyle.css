@@ -1,0 +1,179 @@
+.recipe-image-container img {
+	//max-height: 300px;
+	//max-width: 350px;
+	//position: relative;
+	max-height: 240px;
+	max-width: 300px;
+	vertical-align:center;
+	font-family:courier new;
+	font-weight:lighter;
+	border-radius: 3%;
+}
+
+body{ 
+	font-family:serif;
+	background-color:PapayaWhip;
+}
+
+.recipe-info-container {
+	width: 100%;
+	//position: relative;
+	margin-top: 10px;
+//	border-style: double;
+  //     border-color:white;
+	//border: white;
+     }
+
+/* Each recipe post */
+.recipe {
+	border-style: double;
+       border-color:white;
+	display: inline-block;
+	vertical-align: top;
+	height-max: 600px;
+	width: 300px;
+	margin: 10px;
+	padding: 10px;
+//	border-radius: 5%;
+//	padding: 15px;
+//	border-radius: 10px;
+}
+
+h3{ 
+	color:#BFD8D2;
+	//text-shadow:
+	-1px -1px 0 #DF744A,1px -1px 0 #DF744A, -1px 1px 0 #DF744A, 1px 1px 0 #DF744A;
+}
+
+.recipe-title h4{ 
+	color:#DF744A;
+}
+
+.Ingr { 
+	color: rgb(60,60,60);
+	font-family:Verdana;
+	font-size:small;
+	font-weight:bold;
+     }
+
+.steps{ 
+	color: rgb(60,60,60);
+	font-family:Verdana;
+	font-size:small;
+	font-weight:bold;
+}
+
+.recipe-mealtime { 
+	background:rgba(255,165,0,0.8);
+	border-radius: 8%;
+	margin:2px;
+	color:white;
+	padding:2px;
+	font-family: 'Trebuchet MS';
+	font-size:small;
+}
+
+.recipe-cuisine { 
+	background:rgba(255,99,71,0.8);
+	border-radius: 8%;
+	color:white;
+	font-family:'Trebuchet MS';//good for windowws and macs
+	font-weight:lighter;
+	font-size:small;
+	padding:2px;
+	margin:2px;
+}
+
+/* Please don't edit.... if so keep in mind recipe-post layout may change */
+.recipe-contents {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+     }
+
+/* Display Recipies */
+.title-container {
+	color: #A239CA;
+	font-family:courier new;
+	text-align:center;
+	font-size: 3.5em;
+	margin: 0px;
+	margin: 10px;
+	padding: 5px;
+}
+
+
+h4 {
+	font-family: verdana;	
+	color: rgb(60,60,60);
+	font-size: 15px;
+	font-weight: bolder;
+	text-align: left;
+}
+
+.site-title {
+	text-align:center;
+   	background-color: #BFD8D2;	/*CHANGE*/
+	color: #DF744A ;		/*CHANGE*/
+	font-size: 40px;
+	font-weight:100;
+	padding:30px;
+	margin: 0px;
+	font-family:courier new;
+}
+
+ul{ 
+	list-style-type:none;
+	font-size:20px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#DF744A;
+}
+
+a:link{ 
+	
+	text-decoration:none;
+	color:white;
+	font-family: courier new;
+}
+
+li { 
+	//display:inline;
+	float:left;
+	height:50px;
+	padding: 14px 16px;
+}
+li a:hover{ 
+	color:black;
+	box-shadow:inset 000 25px Papayawhip;
+}
+
+.foo{ 
+   	//margin:10px;
+	//padding:20px;
+	//background-color:white;
+	text-align:left;
+	//width:100%;
+	
+	color: #A239CA;
+	font-family:courier new;
+}
+footer{ 
+	float:left;
+	//text-align:center;
+	//font-size: 3.5em;
+	margin: 0px;
+	//margin: 10px;
+	padding: 10px;
+	width:100%;
+   	position:relative;
+	display:inline;
+	background-color: #BFD8D2;	/*CHANGE*/
+}
+
+.footer{ 
+	font-weight:bold;
+}
