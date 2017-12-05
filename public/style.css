@@ -10,9 +10,7 @@ body {
 .site-title {
   text-align: center;
   background-color: #BFD8D2;
-  /*CHANGE*/
   color: #DF744A;
-  /*CHANGE*/
   font-size: 40px;
   font-weight: 100;
   padding: 30px;
@@ -48,13 +46,9 @@ body {
 }
 
 /*****HOME PAGE SPECIFIC CSS***********************************************/
-
 /*****DISPLAY PAGE SPECIFIC CSS***********************************************/
 
 .recipe-image-container img {
-  //max-height: 300px;
-  //max-width: 350px;
-  //position: relative;
   max-height: 240px;
   max-width: 300px;
   vertical-align: center;
@@ -66,8 +60,6 @@ body {
 .recipe-info-container {
   width: 100%; //position: relative;
   margin-top: 10px; //	border-style: double;
-  //     border-color:white;
-  //border: white;
 }
 
 /* Each recipe post */
@@ -81,8 +73,6 @@ body {
   width: 300px;
   margin: 10px;
   padding: 10px; //	border-radius: 5%;
-  //	padding: 15px;
-  //	border-radius: 10px;
 }
 
 h3 {
@@ -129,8 +119,6 @@ h3 {
   margin: 2px;
 }
 
-/* Please don't edit.... if so keep in mind recipe-post layout may change */
-
 .recipe-contents {
   display: flex;
   flex-direction: column;
@@ -161,12 +149,43 @@ h4 {
 
 /*****INSERT PAGE SPECIFIC CSS***********************************************/
 
+.insert-page h2{ 
+  color: #BFD8D2;
+  text-decoration:underline;
+  font-family: courier new;
+}
+
+.post-input-element { 
+  color:rgb(60,60,60);
+  //font-family:verdana;
+  font-family:courier new;
+}
+
+.post-input-element input{ 
+  border:1px solid #aaa;
+}
+
+textarea{ 
+  color:#DCDCDC;
+}
+
+button[type=submit]{ 
+  color:white;
+  background-color: #DF744A;
+  cursor:pointer;
+  border:1px solid #DF744A;
+}
+
+button[type=reset]{ 
+  background-color:#DCDCDC;
+  color:white;
+  cursor:pointer;
+  border:1px solid #DCDCDC;
+}
+
 /*****FOOTER******************************************************************/
 
 .foo {
-  //margin:10px;
-  //padding:20px;
-  //background-color:white;
   text-align: left; //width:100%;
   color: #A239CA;
   font-family: courier new;
@@ -174,7 +193,6 @@ h4 {
 
 footer {
   float: left; //text-align:center;
-  //font-size: 3.5em;
   margin: 0px; //margin: 10px;
   padding: 10px;
   width: 100%;
