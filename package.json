@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "handlebars ./views/partials/recipe.handlebars -f public/recipeTemplate.js",
-    "prestart": "npm run build"
+    "prestart": "npm run build",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,6 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
-    "mongodb": "^3.0.0-rc0"
+    "mongodb": "^2.2.33"
   }
 }

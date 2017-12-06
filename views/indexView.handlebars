@@ -20,9 +20,11 @@
     <h3 id="selected-recipes-header">Selected Recipes:</h3>
     <div class="recipe-holder">
     <!-- Selected recipes (3 random ones) -->
-            {{> recipe}}
-        {{!-- {{#each selectedRecipes}}
-        {{/each}} --}}
+        {{#each .}}
+            {{#if this.name}}
+                {{> recipe}}
+            {{/if}}
+        {{/each}}
     </div>
 
 

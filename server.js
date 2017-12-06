@@ -14,6 +14,8 @@ var mongoDBName = process.env.MONGO_DB;
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword +
   '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 
+// var mongoURL = 'mongodb://cs290_hartmank:group21@classmongo.engr.oregonstate.edu:27017/cs290_hartmank';
+
 var mongoConnection = null;
 
 var tempRecipeData = require("./tempRecipes")
@@ -26,21 +28,24 @@ app.set('view engine', 'handlebars');
 // }
 
 
+
+
+
 //trying out just root stuff for rendering
 app.get('/', function (req, res){
 
   // var selectedRecipes = tempRecipeData;
   var recipeCollection = mongoConnection.collection('recipes');
-  recipeCollection.find({}).toArray(function (err, results) {
+  recipeCollection.aggregate([ {$sample: {size: 3}} ]).toArray(function (err, results) {
     if (err) {
       res.status(500).send("DB Error: not getting recipes");
     } else {
-      console.log("== query results:", results);
+      console.log("== query results:", results[0]);
       // res.status(200).render('peoplePage', {
       //   people: results
       // });
       var selectedRecipes = results;
-      res.status(200).render(path.join(__dirname, 'views', 'indexView.handlebars'), selectedRecipes);
+      res.status(200).render(path.join(__dirname, 'views', 'indexView.handlebars'), results);
     }
   });
 });
@@ -55,6 +60,7 @@ MongoClient.connect(mongoURL, function(err, connection){
     throw err;
   }
   mongoConnection = connection;
+  // console.log('this should work:', mongoConnection.collection('recipes'))
   app.listen(port, function () {
     console.log("== Server is listening on port", port);
   });
