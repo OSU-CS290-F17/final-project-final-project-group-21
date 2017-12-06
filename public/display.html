@@ -24,10 +24,12 @@
 
         <aside class="filter">
           <h4>Search by: <h4>
+
             <div class = "filter-container">
-              <label for="filter-name" class="label" > Name </label>
-              <input type="text" name="filter-text" class="filter-input">
+              <label for="filter-name" class="filter-label" >Name</label>
+              <input type="text" name="filter-name" id="filter-name" class="filter-input">
             </div>
+
             <div class = "filter-container">
               <select id = "filter-time" class="filter-text">
                 <option selected value="">Cook Time</option>
@@ -37,7 +39,19 @@
 		<option> >1 hour </option>
               </select>
             </div>
-            <button id = "filter-search-button" class = "search-button">Search</button>
+
+            <div class = "filter-container">
+              <select id = "filter-cuisine" class="filter-check">
+                <option selected value="">Cuisine</option>
+		<option> American </option>
+		<option> Asian </option>
+                <option> Italian </option>
+		<option> Mexican </option>
+		<option> Other </option>
+              </select>
+            </div>
+
+	    <button id = "filter-search-button" class = "search-button">Search</button>
           </aside>
 
         </nav>
@@ -231,7 +245,7 @@
 	</div>
 
 
-<div class="recipe" data-ingredients="4" data-cuisine="Other" data-cooktime="10-30 minute" data-meatime="Dinner" data-_name="Salad">
+<div class="recipe" data-ingredients="4" data-cuisine="Other" data-cooktime="10-30 minutes" data-meatime="Dinner" data-_name="Salad">
   <div class="recipe=contents">
     <div class="recipe-image-container">
       <img src="https://www.cooksmarts.com/wp-content/uploads/2015/01/20151109-Italian-Side-Salad-600x500.2-300x250.jpg">
