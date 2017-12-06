@@ -29,14 +29,33 @@ app.set('view engine', 'handlebars');
 //trying out just root stuff for rendering
 app.get('/', function (req, res){
 
-  var selectedRecipes = tempRecipeData;
-  res.status(200).render(path.join(__dirname, 'views', 'indexView.handlebars'), selectedRecipes);
+  // var selectedRecipes = tempRecipeData;
+  var recipeCollection = mongoConnection.collection('recipes');
+  recipeCollection.find({}).toArray(function (err, results) {
+    if (err) {
+      res.status(500).send("DB Error: not getting recipes");
+    } else {
+      console.log("== query results:", results);
+      // res.status(200).render('peoplePage', {
+      //   people: results
+      // });
+      var selectedRecipes = results;
+      res.status(200).render(path.join(__dirname, 'views', 'indexView.handlebars'), selectedRecipes);
+    }
+  });
 });
 
 app.use(express.static("public"));
 
 app.use("*", express.static("public/404.html"));
 
-app.listen(port, function () {
-  console.log("== Server is listening on port", port);
+
+MongoClient.connect(mongoURL, function(err, connection){
+  if (err){
+    throw err;
+  }
+  mongoConnection = connection;
+  app.listen(port, function () {
+    console.log("== Server is listening on port", port);
+  });
 });
