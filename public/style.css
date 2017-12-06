@@ -57,11 +57,63 @@ body {
 
 .filter h4 {
 	display: flex;
-  font-family: courier new;
-  padding-left: 40px;
-  font-weight: bold;
+	font-family: courier new;
+	padding-left: 40px;
+	font-weight: bold;
+	color: #631880;
 }
 
+.search-button {
+	max-height: 30px;
+	position: relative;
+	right: -150px;
+	height: 27px;
+	width: 90px;
+	font-size: medium;
+	top: -4px;
+	border-radius: 5px;
+	background-color: #ffefd5;
+	border-color:#df744a;
+	border-style: groove;
+	font-family: courier;
+	color: #A239CA;
+}
+
+.filter-check {
+	font-family: courier;
+	position: relative;
+	top: -3px;
+	right: -40px;
+	height: 25px;
+	text-indent: 3px;
+	border-radius: 5px;
+	color: #A239CA;
+}
+
+.label {
+	font-weight: bolder;
+	color: #631880;
+}
+
+.filter-text {
+	position: relative;
+	right: -20px;
+	border-radius: 5px;
+	height: 25px;
+	top: -3px;
+	text-indent: 3px;
+	font-family: courier;
+	color: #A239CA;
+}
+
+.filter-input {
+	border-radius: 5px;
+	position: relative;
+	top: -2px;
+	text-indent: 5px;
+	font-family: courier;
+	color: #A239CA;
+}
 
 
 /****        ****/
