@@ -157,9 +157,13 @@ function onPostRecipeClick() {
 
 			//clear the input
 			clearPosts();
+			
+			//show success
+			alert("Recipe Sent!");
 
 			// send the request
 			postRequest.send(requestBody);
+
 			
 		}
 	} else {
