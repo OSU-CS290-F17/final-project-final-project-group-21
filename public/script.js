@@ -56,8 +56,8 @@ function checkName() {
 	var userInput = document.getElementById('filter-name').value;
 	console.log('entered value: ', userInput);
 	for (var i = 0; i < post.length; i++) {
-		var held = post[i].dataset.name;
-		var test = ((held.indexOf(userInput)));
+		var held = post[i].dataset.name.toLower();
+		var test = ((held.indexOf(userInput)).toLower());
 		if (test == -1) {
 			removedPosts.push(post[i]);
 			post[i].remove();
@@ -117,41 +117,24 @@ function onPostRecipeClick() {
 			imgSource: imgSource
 		}
 
-		console.log('name??', newRecipe.name);
-
-
-
+		// console.log('name??', newRecipe.name);
 
 		if (!newRecipe) {
 			alert("You must fill in all of the fields!");
 		} else {
 
-		var postRequest = new XMLHttpRequest();
-		var postURL = "/insert/addRecipe";
-		postRequest.open('POST', postURL);
+			//make and send the request
+			var postRequest = new XMLHttpRequest();
+			var postURL = "/insert/addRecipe";
+			postRequest.open('POST', postURL);
 
-		// var photoObj = {
-		// 	photoURL: photoURL,
-		// 	caption: caption
-		// };
-		var requestBody = JSON.stringify(newRecipe);
-		postRequest.setRequestHeader('Content-Type', 'application/json');
+			var requestBody = JSON.stringify(newRecipe);
+			postRequest.setRequestHeader('Content-Type', 'application/json');
 
-		// postRequest.addEventListener('load', function (event) {
-		// 	if (event.target.status !== 200) {
-		// 		alert("Error storing photo in database:\n\n\n" + event.target.response);
-		// 	} else {
-		// 		var newRecipeHTML = createRecipeHTML(newRecipe);
-		// 		var recipeField = document.getElementById('recipes');
-
-		// 		recipeField.insertAdjacentHTML('beforeend', newRecipeHTML);
-		// 	}
-		// });
-
-		postRequest.send(requestBody);
-
-		// hideModal();
-
+			postRequest.send(requestBody);
+			
+			
+			// document.location.href = '/display';
 		}
 	} else {
 		alert("ERROR: You didn't fill in everything!!");

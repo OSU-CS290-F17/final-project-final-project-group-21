@@ -19,7 +19,7 @@ templates['recipe'] = template({"compiler":[7,">= 4.0.0"],"main":function(contai
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
     + "> \n    </div>\n    <div class=\"recipe-info-container\">\n      <div class=\"recipe-title\"><h4>"
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</h4><h5>"
+    + "</h4><h5>Submitted by: "
     + alias4(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"username","hash":{},"data":data}) : helper)))
     + "</h5></div>\n      <div><i class=\"fa fa-clock-o\" aria-hidden=\"\"true></i><span class=\"recipe-cooktime\"> "
     + alias4(((helper = (helper = helpers.cooktime || (depth0 != null ? depth0.cooktime : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cooktime","hash":{},"data":data}) : helper)))
