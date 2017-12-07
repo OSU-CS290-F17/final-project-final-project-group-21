@@ -8,7 +8,7 @@ if (search && resetSearch){
 	resetSearch.addEventListener("click", function(){ location.reload() });
 }
 
-var submitButton = document.getElementById('submit-button');
+var submitButton = document.getElementById('insert-submit-button');
 
 
 
@@ -160,14 +160,14 @@ function onPostRecipeClick() {
 
 			//clear the input
 			clearPosts();
-			
+
 			//show success
 			alert("Recipe Sent!");
 
 			// send the request
 			postRequest.send(requestBody);
 
-			
+
 		}
 	} else {
 		alert("ERROR: You didn't fill in everything!!");
