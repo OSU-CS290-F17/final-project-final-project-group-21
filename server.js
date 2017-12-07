@@ -69,7 +69,7 @@ app.get('/display', function(req,res){
       //   people: results
       // });
       // var selectedRecipes = results;
-      
+
       res.status(200).render(path.join(__dirname, 'views', 'displayView.handlebars'), results);
     }
   });
@@ -98,7 +98,7 @@ app.post('/insert/addRecipe', function(req, res){
 
     recipeCollection.insertOne(req.body);
 
-  } 
+  }
   else {
     res.status(400).send("Request Body needs substance");
   }

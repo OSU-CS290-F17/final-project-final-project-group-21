@@ -1,7 +1,7 @@
 var removedPosts = [];
 
 var search = document.getElementById("filter-search-button");
-search.addEventListener("click", filterMain);
+// search.addEventListener("click", filterMain);
 var resetSearch = document.getElementById("filter-reset-search-button");
 if (search && resetSearch){
 	search.addEventListener("click", filterMain);
@@ -54,7 +54,7 @@ function checkCuisine() {
 function checkName() {
 	var post = document.getElementsByClassName('recipe');
 	var userInput = document.getElementById('filter-name').value;
-	console.log('entered value: ', userInput);	
+	console.log('entered value: ', userInput);
 	for (var i = 0; i < post.length; i++) {
 		var held = post[i].dataset.name;
 		var test = ((held.indexOf(userInput)));
@@ -84,9 +84,9 @@ function filterMain() {
 	var cuisine = document.getElementById('filter-cuisine').value;
 	if (time)
 		checkTime();
-	if (cuisine) 
+	if (cuisine)
 		checkCuisine();
-	if (userInput) 
+	if (userInput)
 		checkName();
 }
 
@@ -119,7 +119,7 @@ function onPostRecipeClick() {
 
 		console.log('name??', newRecipe.name);
 
-		
+
 
 
 		if (!newRecipe) {
