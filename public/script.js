@@ -10,6 +10,10 @@ if (search && resetSearch){
 
 var submitButton = document.getElementById('submit-button');
 
+
+
+
+
 /*
 function insertNewPost(numberOfIngredients, cuisine, cooktime, mealtime, imgSource, name) {
 	var newRecipeTemplateArgs = {
@@ -90,10 +94,30 @@ function filterMain() {
 		checkName();
 }
 
+// --------------- An attempt at working around mystery submit button -------------------
+function clearPosts(){
+	var placeForName = document.getElementById('post-name-input');
+	var placeFoUsername = document.getElementById('post-username-input');
+	var placeForCuisine = document.getElementById('post-cuisine-input');
+	var placeForCooktime = document.getElementById('post-cooktime-input');
+	var placeForMealtime = document.getElementById('post-mealtime-input');
+	var placeForIngredients = document.getElementById('post-ingredients-input');
+	var placeForInstructions = document.getElementById('post-instructions-input');
+	var placeForImgSource = document.getElementById('post-url-input');
+
+	placeForName.value = '';
+	placeFoUsername.value = '';
+	placeForCuisine.value = 'Select';
+	placeForCooktime.value = 'Select';
+	placeForMealtime.value = 'Select';
+	placeForIngredients.value = '';
+	placeForInstructions.value = '';
+	placeForImgSource.value = '';
+
+}
 
 // ----------------- add thing for insert page so that the damn thing will work -----------------------
 function onPostRecipeClick() {
-
 
 	var name = document.getElementById('post-name-input').value.trim();
 	var username = document.getElementById('post-username-input').value.trim();
@@ -105,7 +129,7 @@ function onPostRecipeClick() {
 	var imgSource = document.getElementById('post-url-input').value.trim();
 
 	if (name && username && cuisine && cooktime && mealtime && ingredients && instructions && imgSource){
-
+		// saveInput = false;
 		var newRecipe = {
 			name: name,
 			username: username,
@@ -120,10 +144,10 @@ function onPostRecipeClick() {
 		// console.log('name??', newRecipe.name);
 
 		if (!newRecipe) {
-			alert("You must fill in all of the fields!");
+			alert("Problem in this script code!!");
 		} else {
 
-			//make and send the request
+			// make the request
 			var postRequest = new XMLHttpRequest();
 			var postURL = "/insert/addRecipe";
 			postRequest.open('POST', postURL);
@@ -131,16 +155,16 @@ function onPostRecipeClick() {
 			var requestBody = JSON.stringify(newRecipe);
 			postRequest.setRequestHeader('Content-Type', 'application/json');
 
+			//clear the input
+			clearPosts();
+
+			// send the request
 			postRequest.send(requestBody);
 			
-			
-			// document.location.href = '/display';
 		}
 	} else {
 		alert("ERROR: You didn't fill in everything!!");
-
 	}
-
 }
 
 if (submitButton){

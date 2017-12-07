@@ -85,16 +85,16 @@ app.post('/insert/addRecipe', function(req, res){
     console.log("\nthis the uploaded body:::", req.body);
     var recipeCollection = mongoConnection.collection('recipes');
 
-    var newRecipe = {
-      name: req.body.name,
-      username: req.body.username,
-      cuisine: req.body.cuisine,
-      cooktime: req.body.cooktime,
-      mealtime: req.body.mealtime,
-      ingredients: req.body.ingredients,
-      instructions: req.body.instructions,
-      imgSource: req.body.imgSource
-    };
+    // var newRecipe = {
+    //   name: req.body.name,
+    //   username: req.body.username,
+    //   cuisine: req.body.cuisine,
+    //   cooktime: req.body.cooktime,
+    //   mealtime: req.body.mealtime,
+    //   ingredients: req.body.ingredients,
+    //   instructions: req.body.instructions,
+    //   imgSource: req.body.imgSource
+    // };
 
     recipeCollection.insertOne(req.body);
 
