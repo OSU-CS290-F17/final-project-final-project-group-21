@@ -1,6 +1,7 @@
 var removedPosts = [];
 
 var search = document.getElementById("filter-search-button");
+search.addEventListener("click", filterMain);
 var resetSearch = document.getElementById("filter-reset-search-button");
 if (search && resetSearch){
 	search.addEventListener("click", filterMain);
