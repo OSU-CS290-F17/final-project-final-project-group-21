@@ -5,19 +5,19 @@ templates['recipe'] = template({"compiler":[7,">= 4.0.0"],"main":function(contai
 
   return "<div class=\"recipe\" data-ingredients="
     + alias4(((helper = (helper = helpers.numberOfIngredients || (depth0 != null ? depth0.numberOfIngredients : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"numberOfIngredients","hash":{},"data":data}) : helper)))
-    + " data-cuisine="
+    + " data-cuisine=\""
     + alias4(((helper = (helper = helpers.cuisine || (depth0 != null ? depth0.cuisine : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cuisine","hash":{},"data":data}) : helper)))
-    + " data-cooktime="
+    + "\" data-cooktime=\""
     + alias4(((helper = (helper = helpers.cooktime || (depth0 != null ? depth0.cooktime : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cooktime","hash":{},"data":data}) : helper)))
-    + " data-mealtime="
+    + "\" data-mealtime=\""
     + alias4(((helper = (helper = helpers.mealtime || (depth0 != null ? depth0.mealtime : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"mealtime","hash":{},"data":data}) : helper)))
-    + " data-name="
+    + "\" data-name=\""
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + ">\n  <div class=\"recipe-contents\">\n\n    <div class=\"recipe-image-container\">\n      <img src="
+    + "\">\n  <div class=\"recipe-contents\">\n\n    <div class=\"recipe-image-container\">\n      <img src=\""
     + alias4(((helper = (helper = helpers.imgSource || (depth0 != null ? depth0.imgSource : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imgSource","hash":{},"data":data}) : helper)))
-    + " alt="
+    + "\" alt=\""
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + "> \n    </div>\n    <div class=\"recipe-info-container\">\n      <div class=\"recipe-title\"><h4>"
+    + "\"> \n    </div>\n    <div class=\"recipe-info-container\">\n      <div class=\"recipe-title\"><h4>"
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
     + "</h4><h5>Submitted by: "
     + alias4(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"username","hash":{},"data":data}) : helper)))
