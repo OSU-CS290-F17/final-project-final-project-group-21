@@ -58,10 +58,13 @@ function checkCuisine() {
 function checkName() {
 	var post = document.getElementsByClassName('recipe');
 	var userInput = document.getElementById('filter-name').value;
-	console.log('entered value: ', userInput);
+	console.log('entered value:', userInput);
+	console.log('post.length:', post.length);
+
 	for (var i = 0; i < post.length; i++) {
-		var held = post[i].dataset.name.toLower();
-		var test = ((held.indexOf(userInput)).toLower());
+		var held = post[i].dataset.name.toString().toLowerCase();
+		console.log('held:', held);
+		var test = held.indexOf(userInput.toLowerCase());
 		if (test == -1) {
 			removedPosts.push(post[i]);
 			post[i].remove();
