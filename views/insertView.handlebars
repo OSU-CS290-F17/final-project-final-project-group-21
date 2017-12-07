@@ -5,78 +5,133 @@
         <h3 class="recipe-container">Create your own Recipe</h3>
     </div>
 
-    {{!-- <form action="#" method="get"> --}}
-      <div class="post-input-element">
-        <label for="post-username-input">Your Name:</label>
-        <input type="text" id="post-username-input"></input>
-      </div>
+    <form action="#" method="get">
+      <table>
+        <tr>
+          <div class="post-input-element">
+            <td>
+              <label for="post-username-input">Your Name:</label>
+            </td>
+            <td>
+              <input type="text" id="post-username-input"></input>
+            </td>
+          </div>
+        </tr>
 
-      <div class="post-input-element">
-        <label for="post-name-input">Recipe Name:</label>
-        <input type="text" id="post-name-input"></input>
-      </div>
+        <tr>
+          <div class="post-input-element">
+            <td>
+              <label for="post-name-input">Recipe Name:</label>
+            </td>
+            <td>
+              <input type="text" id="post-name-input"></input>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="post-input-element">
+            <td>
+              <label for="post-cooktime-input">Cooking Time:</label>
+            </td>
+            <td>
+              <select id="post-cooktime-input" name="drop-cooktime">
+                  <option selected value="">Select</option>
+                  <option>Under 10 minutes</option>
+                  <option>10 to 30 minutes</option>
+                  <option>30 minutes to 1 hour</option>
+                  <option>Over 1 hour</option>
+                </select>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="post-input-element">
+            <td>
+              <label for="post-mealtime-input">Meal Time:</label>
+            </td>
+            <td>
+              <select id="post-mealtime-input" name="drop-mealtime">
+                  <option selected value="">Select</option>
+                  <option>Breakfast</option>
+                  <option>Lunch</option>
+                  <option>Dinner</option>
+                </select>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="post-input-element">
+            <td>
+              <label for="post-cuisine-input">Cuisine:</label>
+            </td>
+            <td>
+              <select id="post-cuisine-input" name="drop-cuisine">
+                  <option selected value="">Select</option>
+                  <option>American</option>
+                  <option>Asian</option>
+                  <option>Italian</option>
+                  <option>Mexican</option>
+                  <option>Other</option>
+                </select>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="post-input-element">
+            <td>
+              <label for="post-instructions-input">Ingredients:</label>
+            </td>
+            <td>
+              <textarea rows="4" cols="50" id="post-ingredients-input" name="textarea-instructions" placeholder="Write up the ingredients for your recipe here!"></textarea>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="post-input-element">
+            <td>
+                <label for="post-instructions-input">Instructions:</label>
+            </td>
+            <td>
+              <textarea rows="6" cols="50" id="post-instructions-input" name="textarea-instructions" placeholder="Write up the instructions for your recipe here!"></textarea>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="post-input-element">
+            <td>
+                <label for="post-name-input">Image URL:</label>
+            </td>
+            <td>
+              <input type="text" id="post-url-input" size=50></input>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <td>
+            <button id="submit-button" type="submit" value="Submit">Submit</button>
+          </td>
+          <td>
+            <button id="reset-button" type="reset" value="Reset">Reset</button>
+          </td>
+        </tr>
+
+      </table>
 
       {{!-- <div class="post-input-element">
         <label for="post-numingr-input">Number of Ingredients:</label>
         <input type="number" min="0" id="post-numingr-input">
       </div> --}}
 
-      <div class="post-input-element">
-        <label for="post-cooktime-input">Cooking Time:</label>
-        <select id="post-cooktime-input" name="drop-cooktime">
-            <option selected value="">Select</option>
-            <option>Under 10 minutes</option>
-            <option>10 to 30 minutes</option>
-            <option>30 minutes to 1 hour</option>
-            <option>Over 1 hour</option>
-          </select>
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-mealtime-input">Meal Time:</label>
-        <select id="post-mealtime-input" name="drop-mealtime">
-            <option selected value="">Select</option>
-            <option>Breakfast</option>
-            <option>Lunch</option>
-            <option>Dinner</option>
-          </select>
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-cuisine-input">Cuisine:</label>
-        <select id="post-cuisine-input" name="drop-cuisine">
-            <option selected value="">Select</option>
-            <option>American</option>
-            <option>Asian</option>
-            <option>Italian</option>
-            <option>Mexican</option>
-            <option>Other</option>
-          </select>
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-instructions-input">Ingredients:</label>
-        <br />
-        <textarea rows="4" cols="50" id="post-ingredients-input" name="textarea-instructions" placeholder="Write up the ingredients for your recipe here!"></textarea>
-
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-instructions-input">Instructions:</label>
-        <br />
-        <textarea rows="4" cols="50" id="post-instructions-input" name="textarea-instructions" placeholder="Write up the instructions for your recipe here!"></textarea>
-
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-name-input">Image URL:</label>
-        <input type="text" id="post-url-input"></input>
-      </div>
 
 
-      <button id="submit-button" type="submit" value="Submit">Submit</button>
-      <button id="reset-button" type="reset" value="Reset">Reset</button>
-    {{!-- </form> --}}
+    </form>
   </main>
 
   <footer>
