@@ -1,7 +1,7 @@
 /*****GENERAL*****************************************************************/
 
 body {
-  font-family: serif;
+  font-family: courier, sans-serif;
   background-color: PapayaWhip;
 }
 
@@ -11,8 +11,8 @@ body {
   text-align: center;
   background-color: #BFD8D2;
   color: #DF744A;
-  font-size: 40px;
-  font-weight: 100;
+  font-size: 60px;
+  font-weight: 400px;
   padding: 30px;
   margin: 0px;
   font-family: courier new;
@@ -25,11 +25,13 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #DF744A;
+  text-align: center;
 }
 
 .navitem {
-  //display:inline;
-  float: left;
+  color: black;
+  display: inline-block;
+  /*float: left;*/
   height: 50px;
   padding: 14px 16px;
 }
@@ -45,13 +47,19 @@ body {
   box-shadow: inset 000 25px Papayawhip;
 }
 
+.navitem a:visited {
+  color: black;
+  /*color: black;*/
+  /*box-shadow: inset 000 25px Papayawhip;*/
+}
+
 /*****HOME PAGE SPECIFIC CSS***********************************************/
 /*****DISPLAY PAGE SPECIFIC CSS***********************************************/
 
 /**** Filter ****/
 .filter {
 	display: flex;
-	position: absolute;
+	/*position: absolute;*/
 	top: 140px;
 }
 
@@ -146,8 +154,12 @@ body {
 }
 
 h3 {
-  color: #BFD8D2; //text-shadow:
-  -1px -1px 0 #DF744A, 1px -1px 0 #DF744A, -1px 1px 0 #DF744A, 1px 1px 0 #DF744A;
+  color: #BFD8D2;
+  font-size: 50px;
+  /*//text-shadow*/
+  /*-1px -1px 0 #DF744A, 1px -1px 0 #DF744A, -1px 1px 0 #DF744A, 1px 1px 0 #DF744A;*/
+  padding: 5px;
+  margin: 5px;
 }
 
 .recipe-title h4 {
