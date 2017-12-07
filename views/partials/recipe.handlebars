@@ -1,23 +1,26 @@
 <div class="recipe" data-ingredients={{numberOfIngredients}} data-cuisine={{cuisine}} data-cooktime={{cooktime}} data-mealtime={{mealtime}} data-name={{name}}>
- <div class="recipe-contents">
-  <div class="recipe-image-container">
-      <img src={{imgSource}} alt={{name}}> </div>
-  <div class="recipe-info-container">
-      <div class="recipe-title"><h4>{{name}}</h4>
+  <div class="recipe-contents">
+
+    <div class="recipe-image-container">
+      <img src={{imgSource}} alt={{name}}> 
+    </div>
+    <div class="recipe-info-container">
+      <div class="recipe-title"><h4>{{name}}</h4><h5>{{username}}</h5></div>
       <div><i class="fa fa-clock-o" aria-hidden=""true></i><span class="recipe-cooktime"> {{cooktime}}</span></div>
       </br>
       <span class="Ingr"> Ingredients</span>
       <span class="recipe-ingred"></br>{{ingredients}} </span>
-  </div>
-  </br>
+      {{!-- </div> --}}
+      </br>
       <span class="steps"> Steps </span>
       </br>
-    <div class="recipe-instructions">
-       <span class="instructionss">{{instructions}}</span>
-    </div>
-    </br>
-    <span class="recipe-mealtime"> {{mealtime}}    </span>
+      <div class="recipe-instructions">
+        <span class="instructionss">{{instructions}}</span>
+      </div>
+      </br>
+      <span class="recipe-mealtime"> {{mealtime}}    </span>
       <span class="recipe-cuisine"> Cuisine: {{cuisine}}</span>
+    </div>
+
   </div>
- </div>
 </div>

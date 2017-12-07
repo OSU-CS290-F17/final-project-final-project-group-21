@@ -1,0 +1,68 @@
+<header>
+    <h1 class="site-title">Cooking with Keaton</h1>
+    <nav class="navbar">
+        <ul class="navlist">
+            <li class="navitem"><a href="/">Home</a></li>
+            <li class="navitem"><a href="/display">View Recipes</a></li>
+            <li class="navitem right"><a href="/insert">Create your own</a></li>
+        </ul>
+
+        <aside class="filter">
+            <h4>Search by: <h4>
+
+            <div class = "filter-container">
+                <label for="filter-name" class="filter-label" >Name</label>
+                <input type="text" name="filter-name" id="filter-name" class="filter-input">
+            </div>
+
+            <div class = "filter-container">
+                <select id = "filter-time" class="filter-text">
+                <option selected value="">Cook Time</option>
+                <option> <10 minutes </option>
+                <option> 10-30 minutes </option>
+                <option> 30-60 minutes </option>
+                <option> >1 hour </option>
+                </select>
+            </div>
+
+            <div class = "filter-container">
+                <select id = "filter-cuisine" class="filter-check">
+                <option selected value="">Cuisine</option>
+                <option> American </option>
+                <option> Asian </option>
+                <option> Italian </option>
+                <option> Mexican </option>
+                <option> Other </option>
+                </select>
+            </div>
+
+            <button id = "filter-search-button" class = "search-button">Search</button>
+            <button id = "filter-reset-search-button" class = "search-button">Reset</button>
+        </aside>
+
+    </nav>
+</header>
+
+<main class="home-page">
+    <section id= "recipes">
+        <div class="title-container">
+            <h3 class="recipe-container">Recipes</h3>
+        </div>
+
+        {{!-- recipes go here --}}
+        {{#each .}}
+            {{#if this.name}}
+                {{> recipe}}
+            {{/if}}
+        {{/each}}
+
+    </section>
+</main>
+
+<footer>
+    <div class="foo">
+    <span class="footer">Connect:</span></br><span class="email">cookingwithkeaton@gmail.com</span>
+    </div>
+</footer>
+
+  <script src = "script.js" charset="utf-8"></script>
