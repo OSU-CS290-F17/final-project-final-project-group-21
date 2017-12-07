@@ -33,24 +33,47 @@ function insertNewPost(numberOfIngredients, cuisine, cooktime, mealtime, imgSour
 
 function checkTime() {
 	var post = document.getElementsByClassName('recipe');
-	var time = document.getElementById('filter-time').value;
+	var timeInput = document.getElementById('filter-time').value;
+	console.log(timeInput);
+	console.log('post.length', post.length);
+
 	for (var i = 0; i < post.length; i++) {
-		if (time != post[i].dataset.cooktime) {
+		console.log(i);
+		var timeToCheck = post[i].dataset.cooktime.toString();
+		console.log('checkin against:', timeToCheck);
+		if (timeInput.toLowerCase() !== timeToCheck.toLowerCase()) {
 			removedPosts.push(post[i]);
 			post[i].remove();
-			checkTime();
+			// checkCuisine();
 		}
 	}
+
+
+	// var post = document.getElementsByClassName('recipe');
+	// var time = document.getElementById('filter-time').value;
+	// for (var i = 0; i < post.length; i++) {
+	// 	if (time != post[i].dataset.cooktime) {
+	// 		removedPosts.push(post[i]);
+	// 		post[i].remove();
+	// 		checkTime();
+	// 	}
+	// }
 }
 
 function checkCuisine() {
 	var post = document.getElementsByClassName('recipe');
-	var cuisine = document.getElementById('filter-cuisine').value;
+	var cuisineInput = document.getElementById('filter-cuisine').value;
+	console.log(cuisineInput);
+	console.log('post.length', post.length);
+
 	for (var i = 0; i < post.length; i++) {
-		if (cuisine != post[i].dataset.cuisine) {
+		console.log(i);
+		var cuisineToCheck = post[i].dataset.cuisine.toString();
+		console.log('checkin against:', cuisineToCheck);
+		if (cuisineInput.toLowerCase() !== cuisineToCheck.toLowerCase()) {
 			removedPosts.push(post[i]);
 			post[i].remove();
-			checkCuisine();
+			// checkCuisine();
 		}
 	}
 }
